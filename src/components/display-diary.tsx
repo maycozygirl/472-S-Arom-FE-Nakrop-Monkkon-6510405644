@@ -18,6 +18,7 @@ interface DisplayDiaryProps {
   date: string;
 }
 
+
 const moodImages: { [key: string]: any } = {
   Angry: AngryImg,
   Anxious: AnxiousImg,
@@ -46,7 +47,6 @@ export default function DisplayDiary({ date }: DisplayDiaryProps) {
 
   const { data: diaries, isLoading, error } = useUserIdDiary(userData?.user_id);
   const data = diaries?.find((item) => item.date === `${date}T00:00:00Z`);
-
   useEffect(() => {
     if (data?.emotions) {
       setSelectedEmotions(data.emotions);
