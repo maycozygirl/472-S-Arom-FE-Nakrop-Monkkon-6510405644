@@ -19,6 +19,7 @@ interface DisplayDiaryProps {
 }
 
 
+
 const moodImages: { [key: string]: any } = {
   Angry: AngryImg,
   Anxious: AnxiousImg,
